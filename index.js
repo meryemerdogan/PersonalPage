@@ -11,3 +11,27 @@ function welcomeFun() {
         clearTimeout(time);
     }
 }
+
+var git = document.getElementById("github");
+var lin = document.getElementById("linkedin");
+
+lin.addEventListener("mouseover", function(){
+    incSize(event,this);
+});
+lin.addEventListener("mouseout", function(){
+    decSize(event,this);
+});
+
+git.addEventListener("mouseover", function(){
+    incSize(event,this);
+});
+git.addEventListener("mouseout", function(){
+    decSize(event,this);
+});
+
+function incSize(event,var1){
+    var1.classList.add("fa-2xl");
+}
+function decSize(event,var1){
+    var1.classList.remove("fa-2xl");
+}
